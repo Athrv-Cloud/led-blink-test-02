@@ -1,0 +1,40 @@
+1. cpputest should be downloaded, locally or else it should be cloned,from offical repo and the cloned folder should be include in the root of the project folder. 
+2. then prepare the cmakelist, where you have to give all the required paths where the test cases and the source code are have been presented,
+3. after comp[letion all the process if want to check the coverage report the in the cmakelist you have to add some lines as 
+
+
+# Enable code coverage in Debug mode
+option(COVERAGE "Enable running with coverage" ON)
+
+if(COVERAGE)
+    message(STATUS "Enabling code coverage flags")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage -g -O0")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --coverage -g -O0")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
+endif()
+
+
+then create the executable by running the commands as 
+
+cmake ..     (..) if you are inside the build folder
+
+make
+
+after that ./you executable file name
+
+to check then coverage mmannualy give coomand as:
+                                                  lcov --capture --directory . --output-file coverage.info
+						genhtml coverage.info --output-directory coverage_report
+						 xdg-open coverage_report/index.html
+
+
+before that you shouuld install the lcov  : 
+
+ sudo apt update
+sudo apt install lcov
+lcov --version
+
+
+
+
+ 

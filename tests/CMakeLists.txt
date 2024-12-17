@@ -18,8 +18,7 @@ endif()
 
 # Find CppUTest
 set(CPPUTEST_USE_GCOV ON CACHE BOOL "Enable code coverage for CppUTest")
-# Add the directory containing CppUTest to the CMake module path
-set(CPPUTEST_HOME "/home/ec2-user/cpputest-4.0")
+add_subdirectory(../tools/cpputest cpputest_build)
 
 # Test files
 set(TEST_SOURCES

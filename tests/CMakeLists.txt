@@ -17,8 +17,7 @@ endif()
 
 
 # Find CppUTest
-set(CPPUTEST_USE_GCOV ON CACHE BOOL "Enable code coverage for CppUTest")
-set(CPPUTEST_HOME "/home/ec2-user/cpputest-4.0")
+find_package(CppUTest REQUIRED)
 
 # Test files
 set(TEST_SOURCES
@@ -40,6 +39,4 @@ add_definitions(-DUNIT_TEST)    # Custom definition to conditionally compile for
 enable_testing()
 add_test(NAME ledblink_tests COMMAND ledblink_tests)
 option(COVERAGE "Enable running with coverage" ON)
-
-
 

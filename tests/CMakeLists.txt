@@ -18,7 +18,7 @@ endif()
 
 # Find CppUTest
 set(CPPUTEST_USE_GCOV ON CACHE BOOL "Enable code coverage for CppUTest")
-add_subdirectory(../tools/cpputest cpputest_build)
+set(CPPUTEST_HOME "/home/ec2-user/cpputest-4.0")
 
 # Test files
 set(TEST_SOURCES

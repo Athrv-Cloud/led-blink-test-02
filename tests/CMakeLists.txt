@@ -15,7 +15,6 @@ if(COVERAGE)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
 endif()
 
-
 # Find CppUTest
 find_package(CppUTest REQUIRED)
 
@@ -38,5 +37,3 @@ add_definitions(-DUNIT_TEST)    # Custom definition to conditionally compile for
 # Enable testing
 enable_testing()
 add_test(NAME ledblink_tests COMMAND ledblink_tests)
-option(COVERAGE "Enable running with coverage" ON)
-

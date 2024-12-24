@@ -13,3 +13,9 @@
 ##### 4. execute the the executable_file
 ##### cmd:  cd tests/
 ##### cmd:  ./ledblink_tests
+
+
+1) to generate the compile_commands.json have to give the command cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..   within build folder
+2) After that if you are running make it will work but test folders has not been enabled to enable give  cmake -DENABLE_TESTS=ON ..
+3) make will work to create executables by including tests, 
+4)  you can give both the commands cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cmake -DENABLE_TESTS=ON ..

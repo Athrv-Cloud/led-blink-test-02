@@ -22,4 +22,5 @@
  
    9)lcov --capture --directory . --output-file /home/purusottam/Downloads/ledblink\ \(1\)/ledblink/build/coverage.info --ignore-errors inconsistent --ignore-errors mismatch
 
+
    10)genhtml /home/purusottam/Downloads/ledblink\ \(1\)/ledblink/build/coverage.info --output-directory /home/purusottam/Downloads/ledblink\ \(1\)/ledblink/build/coverage_html --ignore-errors empty

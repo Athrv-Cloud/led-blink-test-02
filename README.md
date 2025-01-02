@@ -20,4 +20,5 @@
 7) make will work to create executables by including tests, 
 8)  you can give both the commands cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && cmake -DENABLE_TESTS=ON ..
 9)lcov --capture --directory . --output-file /home/purusottam/Downloads/ledblink\ \(1\)/ledblink/build/coverage.info --ignore-errors inconsistent --ignore-errors mismatch
+
 10)genhtml /home/purusottam/Downloads/ledblink\ \(1\)/ledblink/build/coverage.info --output-directory /home/purusottam/Downloads/ledblink\ \(1\)/ledblink/build/coverage_html --ignore-errors empty
